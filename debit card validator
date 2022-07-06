@@ -1,0 +1,127 @@
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+    printf("please Enter your credit card number below!\n");
+    long n;
+    do
+    {
+    n= get_long("Number: ");
+    }
+    while (n<0);
+    long n1 = (n%10);
+    if (n1>9)
+    {
+        n1 = (n1%10) + (n1/10);
+    }
+    long n2 = ((n/10)%10)*2;
+    if (n2>9)
+    {
+        n2 = (n2%10) + (n2/10);
+    }
+    long nd = n/100;
+    long n3 = (nd%10);
+    if (n3>9)
+    {
+        n3 = (n3%10) + (n3/10);
+    }
+    long n4 = ((nd/10)%10)*2;
+    if (n4>9)
+    {
+        n4 = (n4%10) + (n4/10);
+    }
+    long nd1 = nd/100;
+    long n5 = (nd1%10);
+    if (n5>9)
+    {
+        n5 = (n5%10) + (n5/10);
+    }
+    long n6 = ((nd1/10)%10)*2;
+    if (n6>9)
+    {
+        n6 = (n6%10) + (n6/10);
+    }
+    long nd2 = nd1/100;
+    long n7 = (nd2%10);
+    if (n7>9)
+    {
+        n7 = (n7%10) + (n7/10);
+    }
+    long n8 = ((nd2/10)%10)*2;
+    if (n8>9)
+    {
+        n8 = (n8%10) + (n8/10);
+    }
+    long nd3 = nd2/100;
+    long n9 = (nd3%10);
+    if (n9>9)
+    {
+        n9 = (n9%10) + (n9/10);
+    }
+    long n10 = ((nd3/10)%10)*2;
+    if (n10>9)
+    {
+        n10 = (n10%10) + (n10/10);
+    }
+    long nd4 = nd3/100;
+    long n11 = (nd4%10);
+    if (n11>9)
+    {
+        n11 = (n11%10) + (n11/10);
+    }
+    long n12 = ((nd4/10)%10)*2;
+    if (n12>9)
+    {
+        n12 = (n12%10) + (n12/10);
+    }
+    long nd5 = nd4/100;
+    long n13 = (nd5%10);
+    if (n13>9)
+    {
+        n13 = (n13%10) + (n13/10);
+    }
+    long n14 = ((nd5/10)%10)*2;
+    if (n14>9)
+    {
+        n14 = (n14%10) + (n14/10);
+    }
+    long nd6 = nd5/100;
+    long n15 = (nd6%10);
+    if (n15>9)
+    {
+        n15 = (n15%10) + (n15/10);
+    }
+    long n16 = ((nd6/10)%10)*2;
+    if (n16>9)
+    {
+        n16 = (n16%10) + (n16/10);
+    }
+int lohn = (n1+n2+n3+n4+n5+n6+n7+n8+n9+n10+n11+n12+n13+n14+n15+n16);
+lohn = (lohn%10);
+if (lohn == 0)
+{
+    if (nd6 == 22 ||nd6 == 51 ||nd6 == 52 || nd6 == 53 || nd6 == 54 || nd6 == 55)
+    {
+        printf("MASTERCARD\n");
+    }
+    else if (nd5/10 == 34 || nd5/10 == 37)
+    {
+        printf("AMEX\n");
+    }
+    else if (nd6/10 == 4 || nd5%10 == 4)
+    {
+        printf("VISA\n");
+    }
+    else
+    {
+        printf("INVALID\n");
+    }
+}
+else
+{
+    printf("INVALID\n");
+}
+
+}
